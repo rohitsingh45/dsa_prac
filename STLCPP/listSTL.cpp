@@ -6,7 +6,7 @@ using namespace std;
 
 
 int main(){
-
+    // Internally implemented using doubly linked list.
     list<int> ll;
     ll.push_back(4);
     ll.push_front(5);
@@ -24,6 +24,9 @@ int main(){
     for(it = ll.begin(); it != ll.end(); ++it){
         cout << *it << " ";
     }
+
+    // Size of list 
+    cout << "Size of list is:- " << ll.size() << endl;
 
     return 0;
 }

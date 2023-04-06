@@ -25,7 +25,7 @@ int main(){
     for(int i=0; i<temp; i++){
         cout << maxi.top() << " ";
         maxi.pop();
-    }cout << endl;
+    }cout << endl; // OP:- 56 45 22 20 11
 
     // Insertion in min heap.....
     mini.push(45);
@@ -40,7 +40,7 @@ int main(){
     for(int i=0; i<temp; i++){
         cout << mini.top() << " ";
         mini.pop();
-    }cout << endl;
+    }cout << endl; // OP:- 11 20 22 45 56
 
     return 0;
 }

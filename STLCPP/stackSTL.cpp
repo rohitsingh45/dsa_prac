@@ -26,7 +26,7 @@ int main(){
     for(int i=0; i<temp; i++){
         cout << stc.top() << " ";
         stc.pop();
-    }
+    } // Output :- Singh Kumar Rohit
 
     cout << endl <<  "Is stack empty :- " << stc.empty() << endl;
 

@@ -94,7 +94,7 @@ int main(){
 
     // Write your code here......
 
-    int ar[] = {23, 43, 12, 55, 22};
+    int ar[] = {4,1,3,9,7};
 
     for(int i = 0; i<5; i++) cout << ar[i] << " ";
 

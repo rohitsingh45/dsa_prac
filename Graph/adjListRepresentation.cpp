@@ -24,7 +24,7 @@ int main(){
     int V;
     cin >> V;
 
-    vector<int> graph[V];
+    vector<int> graph[V]; // Array of vectors....
     
     cout << "Enter number of edges in the graph" << endl;
     int E;

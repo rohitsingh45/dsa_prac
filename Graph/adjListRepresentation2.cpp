@@ -10,7 +10,7 @@ void addEdges(vector< vector<int> > &arr, int source, int destination){
 
 
 void printGraph(vector< vector<int> > &arr, int V){
-    for(int i=0; i<V; i++){
+    for(int i=0; i<arr.size(); i++){
         cout << i;
         for(int j=0; j<arr[i].size(); j++){
             cout << "->" << arr[i][j];

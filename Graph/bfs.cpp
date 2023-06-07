@@ -16,10 +16,12 @@ void printGraph(unordered_map <int, set<int> > &adjList){
 }
 
 void bfs(unordered_map <int, set<int> > &adjList, unordered_map <int, bool> &visited, vector<int>&ans, int node){
+    // Step 1:- Create a queue and push the node in the queue and marked it visited.
     queue<int>q;
     q.push(node);
     visited[node] = 1;
 
+    // Step 2:- performing above operation for adjacent element of above node.
     while(!q.empty()){
         int frontNode = q.front();
         q.pop();

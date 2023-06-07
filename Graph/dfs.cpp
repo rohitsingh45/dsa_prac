@@ -15,7 +15,7 @@ void printGraph(unordered_map <int, vector<int> > &adjList){
     }
 }
 
-void bfs(unordered_map <int, vector<int> > &adjList, unordered_map <int, bool> &visited, vector<int>&ans, int node){
+void dfs(unordered_map <int, vector<int> > &adjList, unordered_map <int, bool> &visited, vector<int>&ans, int node){
     stack<int>st;
     st.push(node);
     visited[node] = 1;
@@ -35,16 +35,16 @@ void bfs(unordered_map <int, vector<int> > &adjList, unordered_map <int, bool> &
 }
 
 
-void bfsTraversal(int vertex, unordered_map <int, vector<int> > &adjList){
+void dfsTraversal(int vertex, unordered_map <int, vector<int> > &adjList){
     vector<int>ans;
     unordered_map <int, bool> visited;
 
     for(int i=0; i<vertex; i++){
         if(!visited[i]){
-            bfs(adjList, visited, ans, i);
+            dfs(adjList, visited, ans, i);
         }
     }
-cout << "The bfs traversal of above graph is:- " << endl;
+cout << "The dfs traversal of above graph is:- " << endl;
     for(auto i:ans){
         cout << i << " ";
     }
@@ -73,5 +73,5 @@ int main(){
 
     printGraph(adjList);
 
-    bfsTraversal(V, adjList);
+    dfsTraversal(V, adjList);
 }

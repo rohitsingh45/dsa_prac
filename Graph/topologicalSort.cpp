@@ -5,6 +5,8 @@
 // Example:- a graph which has direct edges from 0-1, 0-2, 1-2 since here is not any cycle
 // so here there will be a topological sort values 0 1 2.
 
+// Here in this file we have used DFS approach to find out the topological sort of a DAG.
+
 #include<bits/stdc++.h>
 using namespace std;
 

@@ -16,7 +16,7 @@ bool isCycleDfsDG(unordered_map<int,vector<int> > &adjList, int vertex){
 
     queue<int>q;
     for(int i=0; i<vertex; i++){
-        if(indegree[i==0])q.push(i);
+        if(indegree[i]==0)q.push(i);
     }
 
     int count = 0;
@@ -32,6 +32,9 @@ bool isCycleDfsDG(unordered_map<int,vector<int> > &adjList, int vertex){
         }
 
     }
+    // If number of vertex/elements in topological sort is equal to number of 
+    // vetex present in the graph then there is a valid topological sort and if there is any topological sort
+    // There will not any cycle because a valid topological sort is possible for only Directed Acyclic Graphs.
     if(count == vertex) return false;
     else return true;
 }

@@ -29,12 +29,18 @@ int partion(int arr[], int si, int ei){
     int i = si;
     int j = ei+1;
     while(i<j){
+        // Searching for the index from start index where condition get terminated....
         do{
             i++;
         }while(arr[i]<=pivot);
+
+        // Searching for the index from last index where condition get terminated...
         do{
             j--;
         }while(arr[j]>pivot);
+
+        // Since above both loop will give the location where condition has terminated so 
+        // Swap their value now....
         if(i<j){
             temp = arr[i];
             arr[i] = arr[j];

@@ -3,7 +3,7 @@ using namespace std;
 
 void prepareAdjList(unordered_map <int, vector<int> > &adjList, int u, int v){
     adjList[u].push_back(v);
-    adjList[v].push_back(u);
+    // adjList[v].push_back(u);
 }
 
 void printGraph(unordered_map <int, vector<int> > &adjList){

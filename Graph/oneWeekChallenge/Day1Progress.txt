@@ -1,0 +1,15 @@
+# Graph representation:- 
+	I. AdjMatrix
+		a. Directed Weighted Graph
+		b. Un-directed Weighted Graph
+		c. Directed Graph
+		d. Un-directed Graph
+	II. AdjLIst
+		a. Directed Weighted Graph
+		b. Un-directed Weighted Graph
+		c. Directed Graph
+		d. Un-directed Graph
+
+# Graph Traversal
+	I. BFS traversal
+	II. DFS Traversal

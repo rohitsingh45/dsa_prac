@@ -1,0 +1,53 @@
+---> Cycle detection crisp notes--------------<
+
+	I. Cycle detection in Directed graph using DFS
+		// Approach:- 
+			step 1:- Make a simple DFS method calling by passing the
+						a. Current Vertex
+						b. Visited array (To keep track of each vertex of graph is visited or not)
+						c. pathVisited array ( To keep track of visited nodes in a particular path started from above current vertext)
+			
+			step 2:- In DFS method mark the visited status to true in both the visited and pathVisited array.
+			
+			step 3:- Explore all the adjacent vertex of current vertex and if those are not visited make the dfs call.
+			
+			step 4:- If any node is visited at any case then check its status in the pathVisited if its pathVisited is also true that means 
+					 we have reached at a node which was already visited hence cycle is present in the graph.
+			
+			step 5:- After exploring each adjacent vertex of current vertex mark it as false or un-visited in pathVisited array and return false too.
+	
+	II. Cycle detecting in Directed graph using BFS
+		// Approach:-
+		
+			Step 1:- Find the indegree of each of the vertex of graph.
+						
+				--> Indegree of any vertex is the number of nodes incident on that vertex.
+				
+				--> It can be found by following way:- 
+							a. In adjacency matrix:-
+									Traverse the whole matrix and count the number of 1's in each column. 
+									It will give the indegree of each vertex of graph. 
+									like col[0] = x (x is indegree of 0).
+							
+							b. In adjacency list:- 
+									Traverse the adjacent list of each vertex and count the occurrences of each of the vertex in all the lists.
+									In other word, frequency of time the particular vertex is in the adj list of all vertices.
+			
+			Step 2:- Create a queue and push all the vertices whose indegree value is 0.
+			
+			Step 3:- Now traverse the queue while it become empty and pop out the front element and increase the count by 1.
+			
+			Step 4:- Now explore all the adjacent vertices of that particular popped out vertex and decrease the indegree of their adjacent vertex by 1.
+					 After this process check the indegree of that vertex, if it become 0 then pushed into queue.
+					 
+			Step 5:- Repeat step 4 untill the queue become empty.
+			
+			Step 6:- Now at last compare the count of popped element and number of vertices in the graph.
+					 If both of the value is equal then Graph is a DAG (Directed Acyclic Graph) and there is no cycle otherwise there is cycle in the graph.	
+									
+									
+									
+									
+									
+									
+									
